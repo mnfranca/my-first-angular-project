@@ -2,6 +2,27 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
 
+## Install and use json-server
+
+Create `db.json` file with folow contents:
+
+```json
+{
+  "tasks": [
+    {
+      "id": "21ed7ed4-da81-4bfb-88de-c5c664354024",
+      "name": "Tarefa de exemplo 2"
+    },
+    {
+      "id": "3a78",
+      "name": "Mais uma tarefa"
+    }
+  ]
+}
+```
+
+Install `npm install -g json-server`. Execute `json-server --watch db.json`on project root folder.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

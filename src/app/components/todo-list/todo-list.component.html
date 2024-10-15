@@ -1,0 +1,15 @@
+<div class="container">
+  <ng-content select="[title]"></ng-content>
+  <div>
+    <ng-content select="[label]"></ng-content>
+    <input type="text" name="name" id="name" #todoName>
+  </div>
+  <input type="button" value="Adicionar" (click)="addTask(todoName.value)" />
+  <p *ngIf="tasks.length === 0">Nenhuma tarefa adicionada</p>
+  <ul>
+    <li *ngFor="let task of tasks">
+      {{task.name}}
+      <span class="close" (click)="removeTask(task.id)">X</span>
+    </li>
+  </ul>
+</div>
